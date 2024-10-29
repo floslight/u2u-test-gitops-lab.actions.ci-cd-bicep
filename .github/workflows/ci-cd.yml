@@ -40,9 +40,24 @@ name: .NET Core Desktop
 
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - main
+    paths-ignore: 
+      - README.md
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
+  workflow_dispatch:
+
+# on:
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
+
+env:
+  AZURE_RG: RG3
+  AZURE_SUBSCRIPTION: 88ef7d25-64c4-4899-9c55-8f38054889e5
+  AZURE-LOCATION: WestEurope
 
 jobs:
 
